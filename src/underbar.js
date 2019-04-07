@@ -75,13 +75,22 @@
       if (item === target && result === -1) {
         result = index;
       }
-    });
+1    });
 
     return result;
   };
 
   // Return all elements of an array that pass a truth test.
   _.filter = function(collection, test) {
+   var acc = [];
+   return _.each(collection, function(value, key) {
+    if (test(value)) {
+      acc.push(value);
+    }
+   });
+
+   return acc;
+
   };
 
   // Return all elements of an array that don't pass a truth test.
