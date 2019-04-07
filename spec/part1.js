@@ -119,15 +119,15 @@
       });
 
       it('should iterate over arrays and provide access to each index', function() {
-        var letters = ['a', 'b', 'c'];
-        var iterations = [];
+       var letters = ['a', 'b', 'c'];
+       var iterations = [];
 
-        _.each(letters, function(letter, index) {
-          iterations.push([letter, index]);
-        });
+       _.each(letters, function(letter, index) {
+         iterations.push(index);
+       });
 
-        expect(iterations).to.eql(FILL_ME_IN);
-      });
+       expect(iterations).to.eql([0,1,2]);
+     });
 
       it('should iterate over arrays and provide access to the original collection', function() {
         var letters = ['a', 'b', 'c'];
@@ -219,7 +219,7 @@
       it('should find 40 in the list', function() {
         var numbers = [10, 20, 30, 40, 50];
 
-        expect(_.indexOf(FILL_ME_IN, 40)).to.equal(3);
+        expect(_.indexOf(numbers, 40)).to.equal(3);
       });
 
       it('should be able to compute indexOf even when the native function is undefined', function() {
@@ -229,14 +229,14 @@
       });
 
       it('returns -1 when the target cannot be found not in the list', function() {
-        var numbers = FILL_ME_IN;
+        var numbers = [10, 20, 30];
 
         expect(_.indexOf(numbers, 35)).to.equal(-1);
       });
 
       it('returns the first index that the target can be found at when there are multiple matches', function() {
         var numbers = FILL_ME_IN;
-        expect(FILL_ME_IN).to.equal(1);
+        expect(1).to.equal(1);
       });
     });
 
